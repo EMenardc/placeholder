@@ -19,6 +19,7 @@
 const os = require('os');
 const morgan = require('morgan');
 const express = require('express');
+const cors = require('cors');
 const cluster = require('cluster');
 const through = require('through2');
 const _ = require('lodash');
@@ -34,6 +35,8 @@ const cpus = Math.min( Math.max( envCpus || Infinity, 1 ), os.cpus().length );
 var PORT = process.env.PORT || 3000;
 var HOST = process.env.HOST || undefined;
 var app = express();
+
+app.use(cors());
 
 // store the express http server so it can be terminated gracefully later
 let server;
