@@ -50,7 +50,7 @@ Pelias related downloads are available at https://geocode.earth/data.
 
 ```bash
 $ mkdir data
-$ curl -s https://data.geocode.earth/placeholder/store.sqlite3.gz | gunzip > data/store.sqlite3;
+$ curl -s https://www.dropbox.com/s/poxqtgr0pe2yb58/store.sqlite3.gz?dl=1 -O store.sqlite3 | gunzip > data/store.sqlite3;
 ```
 
 ### confirm the build was successful
